@@ -16,6 +16,7 @@
       <ul class="nav-list">
         <li class="nav-list-item"><a class="nav-list-link catalog-link" href="catalog.html">Каталог</a>
           <div class="catalog-menu">
+            <div class="invisible"><!--вспомогательный элемент, для нормальной работы меню--></div>
             <h2 class="catalog-menu-title">Новинки</h2>
             <ul class="catalog-menu-list">
               <li class="catalog-menu-item"><a class="catalog-menu-link" href="catalog.html">Сливочное</a></li>
@@ -34,6 +35,7 @@
                 d="M16 14.665l-4.921-4.932a6.144 6.144 0 00-.994-8.273 6.113 6.113 0 00-8.307.352 6.141 6.141 0 00-.293 8.328 6.11 6.11 0 008.262.937L14.659 16 16 14.665zm-9.918-4.288a4.245 4.245 0 01-3.928-2.63 4.269 4.269 0 01.922-4.643 4.248 4.248 0 014.632-.923 4.253 4.253 0 012.624 3.936 4.274 4.274 0 01-1.247 3.01 4.256 4.256 0 01-3.003 1.25z"
                 fill="#fff" /></svg></a>
            <div class="search-popup">
+             <div class="invisible invisible-search"><!--вспомогательный элемент, для нормальной работы меню--></div>
              <form action="https://echo.htmlacademy.ru">
                <input class="search-input" type="search" method="get" placeholder="Крем-брюле">
              </form>
@@ -41,12 +43,47 @@
         </li>
         <li class="nav-button-list-item"><a class="nav-button-link entry" href="#"><svg class="entry-pic" width="20" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path class="pic-fill" d="M6.04 14.88l6.92-5.38-6.92-5.37v2.91H0v4.92h6.04v2.92z" fill="#fff" />
-              <path class="pic-fill" d="M18 0H5a2 2 0 00-2 2v2h2V2h13v15H5v-2H3v2a2 2 0 002 2h13a2 2 0 002-2V2a2 2 0 00-2-2z" fill="#fff" /></svg>Вход</a></li>
+              <path class="pic-fill" d="M18 0H5a2 2 0 00-2 2v2h2V2h13v15H5v-2H3v2a2 2 0 002 2h13a2 2 0 002-2V2a2 2 0 00-2-2z" fill="#fff" /></svg>Вход</a>
+             <div class="entry-popup">
+               <div class="invisible-entry"><!--вспомогательный элемент, для нормальной работы меню--></div>
+               <form class="entry-form" action="https://echo.htmlacademy.ru" method="post">
+                 <input class="entry-input" type="email" name="email" placeholder="email@example.com">
+                 <input class="entry-input" type="password" name="password" placeholder="......">
+                 <button class="button entry-button" type="submit" name="button">Войти</button>
+                 <div class="entry-links-box">
+                 <a class="entry-link" href="#">Забыли пароль?</a>
+                 <a class="entry-link" href="#">Новая регистрация</a>
+                 </div>
+               </form>
+             </div>
+        </li>
         <li class="nav-button-list-item"><a class="nav-button-link cart" href="#"><svg class="cart-pic" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path class="pic-fill" d="M5.70345 2L5.46161 0H0V2H3.66795L5.17946 15H19.2869L21 2H5.70345ZM17.5034 13H6.97313L5.96545 4H18.6924L17.5034 13Z" fill="white" />
               <path class="pic-fill" d="M7.03359 20C8.14664 20 9.04894 19.1046 9.04894 18C9.04894 16.8954 8.14664 16 7.03359 16C5.92054 16 5.01823 16.8954 5.01823 18C5.01823 19.1046 5.92054 20 7.03359 20Z" fill="white" />
               <path class="pic-fill" d="M16.1027 20C17.2157 20 18.118 19.1046 18.118 18C18.118 16.8954 17.2157 16 16.1027 16C14.9896 16 14.0873 16.8954 14.0873 18C14.0873 19.1046 14.9896 20 16.1027 20Z" fill="white" />
-            </svg>Пусто</a></li>
+            </svg>Пусто</a>
+            <div class="cart-popup">
+              <div class="invisible-cart"><!--вспомогательный элемент, для нормальной работы меню--></div>
+              <ul class="cart-list">
+                <!-- <li class="cart-item">
+                  <button class="remove-item" type="button"><span class="visually-hidden">Удалить товар из корзины</span></button>
+                  <img class="cart-preview-pic" src="./img/icecream-orange.png" width="33" height="33" alt="превью товара">
+                  <a class="cart-link-name" href="#">Пломбир с апельсиновым джемом</a>
+                  <p class="amount">1,5 кг х <span class="amount-price">200 руб.</span></p>
+                  <p class="cart-price">300 руб.</p>
+                </li>
+                <li class="cart-item">
+                  <button class="remove-item" type="button"><span class="visually-hidden">Удалить товар из корзины</span></button>
+                  <img class="cart-preview-pic" src="./img/icecream-strawberry.png" width="33" height="33" alt="превью товара">
+                  <a class="cart-link-name" href="#">Клубничный пломбир с присыпкой из белого шоколада</a>
+                  <p class="amount">1,5 кг х <span class="amount-price">300 руб.</span></p>
+                  <p class="cart-price">450 руб.</p>
+                </li> -->
+              </ul>
+              <p class="cart-end-price">Итого: 0 руб.</p>
+              <button class="button cart-button" type="button" name="button">Оформить заказ</button>
+            </div>
+       </li>
       </ul>
       <div class="information-box">
         <p class="text-work-time">с 10 до 20, ежедневно</p>
