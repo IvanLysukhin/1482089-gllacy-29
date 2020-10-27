@@ -35,7 +35,7 @@
                 d="M16 14.665l-4.921-4.932a6.144 6.144 0 00-.994-8.273 6.113 6.113 0 00-8.307.352 6.141 6.141 0 00-.293 8.328 6.11 6.11 0 008.262.937L14.659 16 16 14.665zm-9.918-4.288a4.245 4.245 0 01-3.928-2.63 4.269 4.269 0 01.922-4.643 4.248 4.248 0 014.632-.923 4.253 4.253 0 012.624 3.936 4.274 4.274 0 01-1.247 3.01 4.256 4.256 0 01-3.003 1.25z"
                 fill="#fff" /></svg></a>
            <div class="search-popup">
-             <div class="invisible"><!--вспомогательный элемент, для нормальной работы меню--></div>
+             <div class="invisible invisible-search"><!--вспомогательный элемент, для нормальной работы меню--></div>
              <form action="https://echo.htmlacademy.ru">
                <input class="search-input" type="search" method="get" placeholder="Крем-брюле">
              </form>
@@ -47,8 +47,8 @@
              <div class="entry-popup">
                <div class="invisible-entry"><!--вспомогательный элемент, для нормальной работы меню--></div>
                <form class="entry-form" action="https://echo.htmlacademy.ru" method="post">
-                 <input class="entry-input" type="email" name="email" placeholder="email@example.com">
-                 <input class="entry-input" type="password" name="password" placeholder="......">
+                 <input class="entry-input" type="email" name="email" placeholder="email@example.com" required>
+                 <input class="entry-input" type="password" name="password" placeholder="......" required>
                  <button class="button entry-button" type="submit" name="button">Войти</button>
                  <div class="entry-links-box">
                  <a class="entry-link" href="#">Забыли пароль?</a>
@@ -105,10 +105,10 @@
         <fieldset class="filter-box">
           <legend class="filter-title">Сортировка:</legend>
           <select class="sort-select" name="sort" id="sort">
-            <option value="popularity">по популярности</option>
-            <option value="cheap">сначала недорогие</option>
-            <option value="expensive">сначала дорогие</option>
-            <option value="fatness">по жирности</option>
+            <option class="select-name" value="popularity">по популярности</option>
+            <option class="select-name" value="cheap">сначала недорогие</option>
+            <option class="select-name" value="expensive">сначала дорогие</option>
+            <option class="select-name" value="fatness">по жирности</option>
           </select>
         </fieldset>
         <fieldset class="filter-box">
@@ -137,7 +137,7 @@
               <label class="radio-name" for="thirty-fat">до 30%</label>
             </li>
             <li class="radio-item">
-              <input class="radio-input visually-hidden" type="radio" name="fat" value="more-30-percent" id="more-thirty-fat">
+              <input class="radio-input visually-hidden" type="radio" name="fat" value="more-30-percent" id="more-thirty-fat" disabled>
               <label class="radio-name" for="more-thirty-fat">выше 30%</label>
             </li>
           </ul>
@@ -158,7 +158,7 @@
               <label class="check-name" for="fruits">фрукты</label>
             </li>
             <li class="check-item">
-              <input class="check-input visually-hidden" type="checkbox" name="syrups" id="syrups">
+              <input class="check-input visually-hidden" type="checkbox" name="syrups" id="syrups" disabled>
               <label class="check-name" for="syrups">сиропы</label>
             </li>
             <li class="check-item">

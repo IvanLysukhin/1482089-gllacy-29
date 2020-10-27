@@ -1,5 +1,7 @@
 :root {
   --basic-background-color-green: #849D8F;
+  --basic-background-color-grey: #8996A6;
+  --basic-background-color-brown: #9D8B84;
   --basic-text-color-white: #FFFFFF;
   --basic-border-color: rgba(255, 255, 255, 0.2);
   --basic-background-opacity: rgba(255, 255, 255, 0.2);
@@ -31,6 +33,10 @@
   --basic-active-button-color: linear-gradient(0deg, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), linear-gradient(180deg, #F26843 0%, #E74A35 100%);
   --basic-active-shadow-color: #942718;
   --basic-card-background-shadow: rgba(0, 0, 0, 0.2);
+  --basic-inset-shadow: #696969;
+  --basic-border-blue: rgba(46, 136, 228, 0.52);
+  --basic-dark-red: #E74246;
+  --basic-button-background:  rgba(255, 255, 255, 0.4);
 }
 
 /* Fonts */
@@ -576,8 +582,9 @@
   color: var(--basic-grey-light);
   border: 1px solid var(--basic-border-grey);
   border-radius: 6px;
-  width: 355px;
-  height: 44px;
+  box-sizing: border-box;
+  width: 368px;
+  height: 42px;
   padding-left: 11px;
   margin-left: 0px;
 }
@@ -601,7 +608,7 @@
   background-color: var(--basic-contacts-background);
   border-radius: 16px;
   position: relative;
-  z-index: 1;
+  z-index: 3;
   top: 46px;
   left: 422px;
   padding: 14px 25px 45px 25px;
@@ -615,7 +622,12 @@
   transform: translate(-50%, -71.5%);
 }
 
-.map {}
+.map-interactive {
+  top: -20px;
+  position: absolute;
+  height: 432px;
+  z-index: 1;
+}
 
 .location-text {
   color: var(--basic-dark-color-for-text);
@@ -836,6 +848,10 @@
   left:62%;
 }
 
+.toggle:hover {
+  transform: scale(110%);
+}
+
 .radio-list,
 .check-list {
   display: flex;
@@ -870,7 +886,22 @@
 	padding-bottom: 8px;
 	border-radius: 20px;
 	padding-left: 10px;
-	padding-right: 10px;
+	padding-right: 31px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  position: relative;
+  background-image: url(../img/select.svg);
+  background-repeat: no-repeat;
+  background-position: 90% 51%;
+}
+
+.sort-select:hover {
+  color: var(--basic-dark-color-for-text);
+  background-image: url(../img/select-black.svg);
+  background-repeat: no-repeat;
+  background-position: 90% 51%;
 }
 
 .radio-name,
@@ -879,6 +910,7 @@
   font-size: 16px;
   padding-left: 46px;
   position: relative;
+  cursor: pointer;
 }
 
 .radio-input + .radio-name::before {
@@ -926,6 +958,16 @@
   margin-right: 9px;
 }
 
+.check-input[disabled] + .check-name,
+.radio-input[disabled] + .radio-name {
+  opacity: 0.2;
+}
+
+.check-input:hover:not([disabled]) + .check-name::before,
+.radio-input:hover:not([disabled]) + .radio-name::before {
+  opacity: 1;
+}
+
 .form-button {
   font-weight: 500;
   font-size: 16px;
@@ -936,8 +978,20 @@
   border-radius: 20px;
   height: 37px;
   margin-top: 28px;
+  cursor: pointer;
 }
 
+.form-button:hover {
+  color: var(--basic-dark-color-for-text);
+  background: var(--basic-text-color-white);
+}
+
+.form-button:active {
+  background: var(--basic-text-color-white);
+  box-shadow: inset 0px 2px 1px var(--basic-inset-shadow);
+  border: none;
+  padding: 10px 31px;
+}
 
 .pagination-list {
   display: flex;
@@ -984,6 +1038,22 @@
   margin-left: -9px;
 }
 
+.pagination-link:hover:not(.current-page) {
+  background-color: var(--basic-background-opacity);
+  border-radius: 50%;
+  padding: 4px 9px;
+  margin-right: -9px;
+  margin-left: -9px;
+}
+.pagination-link:active:not(.current-page) {
+  color: var(--basic-dark-color-for-text);
+  background-color: var(--basic-text-color-white);
+  border-radius: 50%;
+  padding: 4px 9px;
+  margin-right: -9px;
+  margin-left: -9px;
+}
+
 .catalog-footer {
   padding-top: 20px;
   border-top: 1px solid var(--basic-background-opacity);
@@ -999,7 +1069,7 @@
 }
 
 .catalog-link:active {
-  box-shadow: inset 0px 2px 1px #696969;
+  box-shadow: inset 0px 2px 1px var(--basic-inset-shadow);
 }
 
 .current-nav {
@@ -1081,10 +1151,10 @@
 	content: "";
 	position: absolute;
 	height: 1px;
-	width: 128px;
+	width: 126px;
 	background-color: var(--basic-popup-line);
 	top: 29px;
-	left: -14px;
+	left: -16px;
 }
 
 .search-popup {
@@ -1107,8 +1177,21 @@
 	padding-bottom: 13px;
 	padding-left: 15px;
 	border-radius: 4px;
-	border: 1px solid #D3D3D2;
+	border: 1px solid var(--basic-border-grey);
 	width: 100%;
+  height: 44px;
+  box-sizing: border-box;
+}
+
+.search-input:hover,
+.entry-input:hover {
+  border: 2px solid var(--basic-border-grey);
+}
+.search-input:focus,
+.entry-input:focus {
+  border: 2px solid var(--basic-border-blue);
+  color: var(--basic-dark-color-for-text);
+  font-weight: bold;
 }
 
 .nav-button-list-item:first-of-type:hover .search-popup {
@@ -1124,10 +1207,10 @@
 }
 
 .invisible-search {
-  left: 50px;
-  width: 300px;
-  height: 40px;
-  top: -30px;
+  left: 194px;
+  width: 146px;
+  height: 17px;
+  top: -8px;
 }
 
 .entry-popup {
@@ -1368,5 +1451,243 @@
 }
 
 .hits-item:hover  .hit-price-catalog {
-  bottom: 119px;
+  bottom: 118px;
+}
+
+.subscripe-input:hover {
+  border: 2px solid var(--basic-border-grey);
+}
+
+.subscripe-input:focus {
+  border: 2px solid var(--basic-border-blue);
+  color: var(--basic-dark-color-for-text);
+  font-weight: bold;
+}
+
+.modal {
+  position: fixed;
+  background: var(--basic-background-popup);
+  border-radius: 6px;
+  padding: 15px 27px 10px 23px;
+  z-index: 100;
+  top: 20%;
+  margin:auto;
+  left:0;
+  right:0;
+  max-width: 427px;
+  z-index: 100;
+  display: none;
+}
+
+.modal-big-text {
+  font-weight: 500;
+  font-size: 24px;
+  color: var(--basic-dark-color-for-text);
+  display: block;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.modal-input,
+.modal-input-text {
+	color: var(--basic-grey-light);
+	border: 1px solid var(--basic-border-grey);
+	border-radius: 6px;
+	box-sizing: border-box;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	padding-left: 14px;
+	margin-bottom: 19px;
+  padding-right: 5px;
+}
+
+.modal-input {
+  width: 267px;
+  height: 45px;
+}
+
+.modal-input-text {
+  resize: none;
+  width: 425px;
+  height: 161px;
+}
+
+.modal-input:hover,
+.modal-input:hover,
+.modal-input-text:hover,
+.modal-input-text:hover {
+  border: 2px solid var(--basic-border-grey);
+}
+.modal-input:focus,
+.modal-input:focus,
+.modal-input-text:focus,
+.modal-input-text:focus {
+  border: 2px solid var(--basic-border-blue);
+  color: var(--basic-dark-color-for-text);
+  font-weight: bold;
+}
+
+.modal-button {
+ align-self: flex-end;
+}
+
+.modal-close-button {
+  background-color: transparent;
+  cursor: pointer;
+  border: 0;
+  position: absolute;
+  top: 15px;
+  right: 8px;
+  opacity: 0.3;
+  height: 23px;
+}
+
+.modal-close-button::before {
+  content: "";
+  position: absolute;
+  height: 17px;
+  width: 18px;
+  top: 1px;
+  left: -11px;
+  background: url(../img/close-modal.svg)
+}
+
+.modal-close-button:hover {
+  opacity: 1;
+}
+
+.modal-close-button:active {
+  opacity: 1;
+  top: 15px;
+  right: 8px;
+  opacity: 0.3;
+}
+
+.modal-overlay {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 0;
+  left: 0;
+  z-index: 99;
+  display: none;
+}
+
+.modal-open {
+  display: block;
+  animation: bounce 0.6s;
+}
+
+.overlay-open {
+  display: block;
+}
+
+.error {
+  animation: shake 0.6s;
+}
+
+.required {
+  box-shadow: none;
+  border-color: var(--basic-dark-red);
+}
+
+.promo-slider {
+  position: relative;
+}
+
+.slider-buttons {
+  position: absolute;
+  bottom: 11px;
+}
+
+.slider-button{
+  height: 19px;
+  width: 19px;
+  border: 2px solid var(--basic-text-color-white);
+  background-color: transparent;
+  border-radius: 50%;
+  margin-right: 7px;
+  cursor: pointer;
+}
+
+.current-slider-button {
+  background-color: var(--basic-text-color-white);
+}
+
+.slider-button:hover:not(.current-slider-button) {
+  background-color: var(--basic-button-background);
+}
+
+.page-grey {
+  background-color: var(--basic-background-color-grey);
+}
+
+.page-brown {
+  background-color: var(--basic-background-color-brown);
+}
+
+.page-body-slid-2 {
+  background-image: url("../img/ice-cream-promo-slide2.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.page-body-slid-3 {
+  background-image: url("../img/ice-cream-promo-slide3.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+
+
+
+/* Анимации */
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }
