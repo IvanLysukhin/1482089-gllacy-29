@@ -72,6 +72,7 @@
   color: var(--basic-text-color-white);
   background-color: var(--basic-background-color-green);
   height: 100%;
+  overflow-x: hidden;
 }
 
 .container {
@@ -887,8 +888,6 @@
 	border-radius: 20px;
 	padding-left: 10px;
 	padding-right: 31px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   cursor: pointer;
   position: relative;
@@ -1435,8 +1434,8 @@
 	padding: 12px 2px;
 	width: 200px;
 	left: 31px;
-	position: relative;
-	top: 2px;
+	position: absolute;
+
   display: none;
 }
 
@@ -1445,14 +1444,18 @@
   position: relative;
 }
 
+.hits-item:hover {
+  z-index: 100;
+}
+
 .hits-item:hover .card-background,
 .hits-item:hover .card-button {
   display:block;
 }
 
-.hits-item:hover  .hit-price-catalog {
+/* .hits-item:hover  .hit-price-catalog {
   bottom: 118px;
-}
+} */
 
 .subscripe-input:hover {
   border: 2px solid var(--basic-border-grey);

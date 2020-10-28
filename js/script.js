@@ -46,6 +46,20 @@ closeButton.addEventListener("click", function(evt){
   text.classList.remove("required");
 });
 
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    if (feedbackForm.classList.contains("modal-open")) {
+      evt.preventDefault();
+      feedbackForm.classList.remove("modal-open");
+      overlay.classList.remove("overlay-open");
+      feedbackForm.classList.remove("error")
+      name.classList.remove("required");
+      email.classList.remove("required");
+      text.classList.remove("required");
+    }
+  }
+});
+
 
 let buttonSlideFirst = document.querySelector(".button-1");
 let buttonSlideSecond = document.querySelector(".button-2");
