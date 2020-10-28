@@ -621,6 +621,7 @@
   left: 50%;
   top: 68%;
   transform: translate(-50%, -71.5%);
+  z-index: -1;
 }
 
 .map-interactive {
@@ -628,6 +629,7 @@
   position: absolute;
   height: 432px;
   z-index: 1;
+  width: 100%;
 }
 
 .location-text {
