@@ -3,9 +3,8 @@
 
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="css/style.min.css">
   <link rel="stylesheet" href="css/normalize.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.min.css" <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <title>HTML Academy: Глейси</title>
 </head>
 
@@ -16,7 +15,9 @@
       <ul class="nav-list">
         <li class="nav-list-item"><a class="nav-list-link catalog-link" href="catalog.html">Каталог</a>
           <div class="catalog-menu">
-            <div class="invisible"><!--вспомогательный элемент, для нормальной работы меню--></div>
+            <div class="invisible">
+              <!--вспомогательный элемент, для нормальной работы меню-->
+            </div>
             <h2 class="catalog-menu-title">Новинки</h2>
             <ul class="catalog-menu-list">
               <li class="catalog-menu-item"><a class="catalog-menu-link" href="catalog.html">Сливочное</a></li>
@@ -34,42 +35,51 @@
               <path class="pic-fill"
                 d="M16 14.665l-4.921-4.932a6.144 6.144 0 00-.994-8.273 6.113 6.113 0 00-8.307.352 6.141 6.141 0 00-.293 8.328 6.11 6.11 0 008.262.937L14.659 16 16 14.665zm-9.918-4.288a4.245 4.245 0 01-3.928-2.63 4.269 4.269 0 01.922-4.643 4.248 4.248 0 014.632-.923 4.253 4.253 0 012.624 3.936 4.274 4.274 0 01-1.247 3.01 4.256 4.256 0 01-3.003 1.25z"
                 fill="#fff" /></svg></a>
-           <div class="search-popup">
-             <div class="invisible invisible-search"><!--вспомогательный элемент, для нормальной работы меню--></div>
-             <form action="https://echo.htmlacademy.ru" method="get">
-               <input class="search-input" type="search" placeholder="Крем-брюле">
-             </form>
-           </div>
+          <div class="search-popup">
+            <div class="invisible invisible-search">
+              <!--вспомогательный элемент, для нормальной работы меню-->
+            </div>
+            <form action="https://echo.htmlacademy.ru" method="get">
+              <label class="visually-hidden" for="icecream-search">Поиск мороженого</label>
+              <input class="search-input" type="search" placeholder="Крем-брюле">
+            </form>
+          </div>
         </li>
         <li class="nav-button-list-item"><a class="nav-button-link entry" href="#"><svg class="entry-pic" width="20" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path class="pic-fill" d="M6.04 14.88l6.92-5.38-6.92-5.37v2.91H0v4.92h6.04v2.92z" fill="#fff" />
               <path class="pic-fill" d="M18 0H5a2 2 0 00-2 2v2h2V2h13v15H5v-2H3v2a2 2 0 002 2h13a2 2 0 002-2V2a2 2 0 00-2-2z" fill="#fff" /></svg>Вход</a>
-             <div class="entry-popup">
-               <div class="invisible-entry"><!--вспомогательный элемент, для нормальной работы меню--></div>
-               <form class="entry-form" action="https://echo.htmlacademy.ru" method="post">
-                 <input class="entry-input" type="email" name="email" placeholder="email@example.com" required>
-                 <input class="entry-input" type="password" name="password" placeholder="......" required>
-                 <button class="button entry-button" type="submit" name="button">Войти</button>
-                 <div class="entry-links-box">
-                 <a class="entry-link" href="#">Забыли пароль?</a>
-                 <a class="entry-link" href="#">Новая регистрация</a>
-                 </div>
-               </form>
-             </div>
+          <div class="entry-popup">
+            <div class="invisible-entry">
+              <!--вспомогательный элемент, для нормальной работы меню-->
+            </div>
+            <form class="entry-form" action="https://echo.htmlacademy.ru" method="post">
+              <label class="visually-hidden" for="email-entry">Введите Ваш email</label>
+              <input class="entry-input" type="email" name="email" id="email-entry" placeholder="email@example.com" required>
+              <label class="visually-hidden" for="password-entry">Введите Ваш email</label>
+              <input class="entry-input" type="password" name="password" id="password-entry" placeholder="......" required>
+              <button class="button entry-button" type="submit" name="button">Войти</button>
+              <div class="entry-links-box">
+                <a class="entry-link" href="#">Забыли пароль?</a>
+                <a class="entry-link" href="#">Новая регистрация</a>
+              </div>
+            </form>
+          </div>
         </li>
         <li class="nav-button-list-item"><a class="nav-button-link cart" href="#"><svg class="cart-pic" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path class="pic-fill" d="M5.70345 2L5.46161 0H0V2H3.66795L5.17946 15H19.2869L21 2H5.70345ZM17.5034 13H6.97313L5.96545 4H18.6924L17.5034 13Z" fill="white" />
               <path class="pic-fill" d="M7.03359 20C8.14664 20 9.04894 19.1046 9.04894 18C9.04894 16.8954 8.14664 16 7.03359 16C5.92054 16 5.01823 16.8954 5.01823 18C5.01823 19.1046 5.92054 20 7.03359 20Z" fill="white" />
               <path class="pic-fill" d="M16.1027 20C17.2157 20 18.118 19.1046 18.118 18C18.118 16.8954 17.2157 16 16.1027 16C14.9896 16 14.0873 16.8954 14.0873 18C14.0873 19.1046 14.9896 20 16.1027 20Z" fill="white" />
             </svg>Пусто</a>
-            <div class="cart-popup">
-              <div class="invisible-cart"><!--вспомогательный элемент, для нормальной работы меню--></div>
-              <ul class="cart-list">
-              </ul>
-              <p class="cart-end-price">Итого: 0 руб.</p>
-              <button class="button cart-button" type="button" name="button">Оформить заказ</button>
+          <div class="cart-popup">
+            <div class="invisible-cart">
+              <!--вспомогательный элемент, для нормальной работы меню-->
             </div>
-       </li>
+            <ul class="cart-list">
+            </ul>
+            <p class="cart-end-price">Итого: 0 руб.</p>
+            <button class="button cart-button" type="button" name="button">Оформить заказ</button>
+          </div>
+        </li>
       </ul>
       <div class="information-box">
         <p class="text-work-time">с 10 до 20, ежедневно</p>
@@ -80,8 +90,6 @@
   <main class="main-container">
     <h1 class="visually-hidden">Онлайн магазин мороженого "Глейси"</h1>
     <section class="promo-slider container">
-      <!-- <ul class="slider-list">
-        <li class="slider-item"> -->
       <h2 class="visually-hidden">Самое вкусное предложение</h2>
       <p class="big-promo-text ">Крем-брюле и пломбир<br> с малиновым джемом</p>
       <p class="big-promo-text visually-hidden">Шоколадный пломбир<br> и лимонный сорбет</p>
@@ -167,13 +175,14 @@
           <a href="#" class="news-title">10 способов сервировки фруктовых щербетов<br> к столу</a>
         </div>
       </div>
-      <div class="subscripe-box">
+      <div class="subscribe-box">
         <h2 class="visually-hidden">Форма подписки на блок</h2>
-        <div class="subscripe-box-background">
-          <p class="subscripe-text">Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-          <form class="subscripe-form" action="https://echo.htmlacademy.ru" method="post">
-            <input class="subscripe-input" type="email" name="email" placeholder="email@example.com" required>
-            <button class="button subscripe-button" type="submit" name="button">Отправить</button>
+        <div class="subscribe-box-background">
+          <p class="subscribe-text">Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+          <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
+            <label class="visually-hidden" for="subscribe-email">Введите Ваш email для рассылки</label>
+            <input class="subscribe-input" type="email" name="email" id="subscribe-email" placeholder="email@example.com" required>
+            <button class="button subscribe-button" type="submit" name="button">Отправить</button>
           </form>
         </div>
       </div>
@@ -190,7 +199,8 @@
         </div>
         <button class="button feedback-button" type="button">Форма обратной связи</button>
       </div>
-      <iframe class="map-interactive" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1602230164981!5m2!1sru!2sru"
+      <iframe class="map-interactive"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1602230164981!5m2!1sru!2sru"
         allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
       <div class="map-box">
         <img class="map" src="./img/map.png" width="1200" height="430" alt="ул. Большая Конюшенная, 19/8, Санкт-Петербург">
@@ -202,7 +212,7 @@
       <h2 class="visually-hidden">Социальные сети</h2>
       <ul class="social-list">
         <li class="social-item"><a class="social-link" href="https://www.facebook.com/">
-            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Facebook">
               <path d="M18 35C27.3888 35 35 27.3888 35 18C35 8.61116 27.3888 1 18 1C8.61116 1 1 8.61116 1 18C1 27.3888 8.61116 35 18 35Z" stroke="white" class="social-line " stroke-width="2" />
               <path class="social-pic"
                 d="M18 2C14.8355 2 11.7421 2.93838 9.11088 4.69649C6.4797 6.45459 4.42894 8.95345 3.21793 11.8771C2.00693 14.8007 1.69008 18.0177 2.30744 21.1214C2.92481 24.2251 4.44866 27.0761 6.6863 29.3137C8.92394 31.5513 11.7749 33.0752 14.8786 33.6926C17.9823 34.3099 21.1993 33.9931 24.1229 32.7821C27.0466 31.5711 29.5454 29.5203 31.3035 26.8891C33.0616 24.2579 34 21.1645 34 18C34 13.7565 32.3143 9.68687 29.3137 6.68629C26.3131 3.68571 22.2435 2 18 2ZM22.06 11.45H19V14.9H22V18.34H19V27H16V18.34H13V14.9H16V11.45C15.9449 10.5957 16.2291 9.75426 16.7908 9.1083C17.3525 8.46234 18.1464 8.06407 19 8H22V11.45H22.06Z"
@@ -210,7 +220,7 @@
             </svg>
           </a></li>
         <li class="social-item"><a class="social-link" href="https://vk.com/">
-            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="ВКонтакте">
               <path d="M18 35C27.3888 35 35 27.3888 35 18C35 8.61116 27.3888 1 18 1C8.61116 1 1 8.61116 1 18C1 27.3888 8.61116 35 18 35Z" stroke="white" class="social-line " stroke-width="2" />
               <path class="social-pic"
                 d="M18.64 16.49C18.9652 16.4904 19.2875 16.4293 19.59 16.31C19.8645 16.2077 20.0922 16.0085 20.23 15.75C20.3343 15.4964 20.3854 15.2241 20.38 14.95C20.376 14.7057 20.3143 14.4659 20.2 14.25C20.0714 14.0066 19.8523 13.8235 19.59 13.74C19.2687 13.627 18.9306 13.5695 18.59 13.57H16.59V16.57H17.16C17.75 16.52 18.24 16.51 18.64 16.49Z"
@@ -224,7 +234,7 @@
             </svg>
           </a></li>
         <li class="social-item"><a class="social-link" href="https://www.instagram.com/">
-            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Instagram">
               <path d="M18 35C27.3888 35 35 27.3888 35 18C35 8.61116 27.3888 1 18 1C8.61116 1 1 8.61116 1 18C1 27.3888 8.61116 35 18 35Z" stroke="white" class="social-line " stroke-width="2" />
               <g class="social-pic">
                 <path
@@ -241,13 +251,12 @@
             </svg>
           </a></li>
         <li class="social-item"><a class="social-link" href="https://twitter.com/">
-            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Twitter">
               <path d="M18 35C27.3888 35 35 27.3888 35 18C35 8.61116 27.3888 1 18 1C8.61116 1 1 8.61116 1 18C1 27.3888 8.61116 35 18 35Z" stroke="white" class="social-line " stroke-width="2" />
               <path class="social-pic"
                 d="M18 2C14.8355 2 11.7421 2.93838 9.11088 4.69649C6.4797 6.45459 4.42894 8.95345 3.21793 11.8771C2.00693 14.8007 1.69008 18.0177 2.30744 21.1214C2.92481 24.2251 4.44866 27.0761 6.6863 29.3137C8.92394 31.5513 11.7749 33.0752 14.8786 33.6926C17.9823 34.3099 21.1993 33.9931 24.1229 32.7821C27.0466 31.5711 29.5454 29.5203 31.3035 26.8891C33.0616 24.2579 34 21.1645 34 18C34 13.7565 32.3143 9.68687 29.3137 6.68629C26.3131 3.68571 22.2435 2 18 2ZM25.94 14.81C25.69 21.33 22.48 25.64 14.94 25.51H14.46C14.01 25.51 9.91001 25.07 9.11001 23.69C10.8989 23.9555 12.7228 23.5494 14.23 22.55C13.18 22.26 11.31 22.09 10.98 19.7C11.3928 19.8642 11.8441 19.9058 12.28 19.82C11 19 9.53001 18.3 9.61001 16.17C10.028 16.4893 10.5445 16.652 11.07 16.63C10.3 16.4 8.92001 13.39 10.07 11.85C12.07 13.64 14.14 15.33 17.87 15.49C18.1 13.28 19.11 11.79 21.04 11.17C21.7375 10.9333 22.4908 10.9157 23.1986 11.1195C23.9065 11.3232 24.5351 11.7387 25 12.31C25.74 12.08 26.45 11.84 27.19 11.62C27.1758 11.9571 27.0846 12.2865 26.9234 12.5829C26.7622 12.8793 26.5353 13.1349 26.26 13.33C26.5167 13.3601 26.7768 13.3336 27.0221 13.2524C27.2674 13.1712 27.492 13.0372 27.68 12.86C27.5628 13.2985 27.3443 13.7034 27.0421 14.0421C26.7399 14.3808 26.3624 14.6438 25.94 14.81Z"
                 fill="white" />
             </svg>
-
           </a></li>
       </ul>
     </div>
@@ -271,9 +280,12 @@
     <h2 class="visually-hidden">Форма обратной связи</h2>
     <p class="modal-big-text">Мы обязательно вам ответим!</p>
     <form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
-      <input class="modal-input modal-name" type="text" name="name" placeholder="Имя Фамилия">
-      <input class="modal-input modal-email" type="email" name="email" placeholder="email@example.com">
-      <textarea class="modal-input-text" name="feedback" rows="6" cols="41" placeholder="В свободной форме"></textarea>
+      <label class="visually-hidden" for="modal-name">Введите Ваше Имя и Фамилию</label>
+      <input class="modal-input modal-name" type="text" name="name" id="modal-name" placeholder="Имя Фамилия">
+      <label class="visually-hidden" for="modal-email">Введите Ваш email</label>
+      <input class="modal-input modal-email" type="email" name="email" id="modal-email" placeholder="email@example.com">
+      <label class="visually-hidden" for="modal-letter">Сообщение в свободной форме</label>
+      <textarea class="modal-input-text" name="feedback" id="modal-letter" rows="6" cols="41" placeholder="В свободной форме"></textarea>
       <button class="button modal-button" type="submit">Отправить</button>
     </form>
     <button type="button" class="modal-close-button"><span class="visually-hidden">Закрыть</span></button>
