@@ -521,7 +521,7 @@
   font-weight: bold;
   font-size: 24px;
   line-height: 30px;
-  border-bottom: 4px solid var(--basic-dark-color-for-text);
+  border-bottom: 2px solid var(--basic-dark-color-for-text);
 }
 
 .subscribe-box {
@@ -1376,14 +1376,15 @@
 }
 
 .news-title:hover,
-.news-title:active,
-.cart-link-name:hover,
-.cart-link-name:active {
-  border-bottom: 1px solid var(--basic-color-active-link-red-border);
+.news-title:active {
+  border-bottom: 2px solid var(--basic-color-active-link-red);
+  color: var(--basic-color-active-link-red);
 }
 
 .location-phone:hover,
-.location-phone:active {
+.location-phone:active,
+.cart-link-name:hover,
+.cart-link-name:active {
   color: var(--basic-color-active-link-red);
 }
 
